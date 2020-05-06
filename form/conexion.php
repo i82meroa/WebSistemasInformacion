@@ -1,5 +1,5 @@
 <?php
-$servername="68.183.213.14:3306";
+$servername="68.183.213.14";
 $username="usuario";
 $password="1920";
 $bd="sif_tfp";
