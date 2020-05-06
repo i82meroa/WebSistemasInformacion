@@ -9,7 +9,7 @@
 <body>
           <div class="container">
           <H1>Datos de cliente</H1><BR>
-              <form name="vivienda" action="form.php" method="POST" enctype="multipart/form-data">
+              <form name="form" action="form.php" method="POST" enctype="multipart/form-data">
               <fieldset>
                 <legend>Rellene el formulario</legend></br>
                   <div>
@@ -63,12 +63,12 @@
   $db = mysqli_select_db( $conexion, $bd ) or die ("No se ha podido conectar a la Base de datos");
   
   //Facilitamos recogida de datos con variables sencillas
-  $ejercicio=2020;
-  $Beneficio_bruto=$_REQUEST['Beneficio_bruto'];
-  $Impuestos=$_REQUEST['Impuestos'];
-  $Intereses=$_REQUEST['Intereses'];
-  $Despreciacion=$_REQUEST['Despreciacion'];
-  $Gastos_Generales=$_REQUEST['Gastos_Generales'];
+  $ejercicio='2020';
+  $Beneficio_bruto=$_POST['Beneficio_bruto'];
+  $Impuestos=$_POST['Impuestos'];
+  $Intereses=$_POST['Intereses'];
+  $Despreciacion=$_POST['Despreciacion'];
+  $Gastos_Generales=$_POST['Gastos_Generales'];
 
   //Insercion de datos
   $sql = "INSERT INTO DATOS_ACTIVOS (ANO, Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales)
