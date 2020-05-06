@@ -65,7 +65,7 @@ $Despreciacion=$_REQUEST['Despreciacion'];
 $Gastos_Generales=$_REQUEST['Gastos_Generales'];
 
 //Insercion de datos
-$sql = "INSERT INTO sif_tfp (ANO, Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales)
+$sql = "INSERT INTO DATOS_ACTIVOS (ANO, Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales)
 VALUES (2020, '$Beneficio_bruto', '$Impuestos', '$Intereses', '$Despreciacion', '$Gastos_Generales')";
   
 mysqli_close($conexion);
