@@ -25,20 +25,29 @@ include 'conexion.php';
             <fieldset>
               <legend>Rellene el formulario</legend></br>
                 <div>
-                <label for="direccion">*Dirección:</label>
-                    <input type="text" name="direccion" size="30" maxlength="50" placeholder="Introduzca la direccion">
+                <label for="Beneficio_bruto">Beneficio bruto:</label>
+                    <input type="text" name="Beneficio_bruto" size="30" maxlength="50">
                 </div>            
                 <br>
                 <div>
-                    <label for="precio">*Precio:</label>
-                    <input type="text" name="precio" size="30" maxlength="12" placeholder="Introduzca el precio">€
-                   
+                    <label for="Impuestos">Impuestos:</label>
+                    <input type="text" name="Impuestos" size="30" maxlength="12">            
                 </div>
                 <br>
                 <div>
-                    <label for="tamano">*Tamaño:</label>
-                    <input type="text" name="tamano" size="30" maxlength="12" placeholder="Introduzca tamaño">
+                    <label for="Intereses">Intereses:</label>
+                    <input type="text" name="Intereses" size="30" maxlength="12">
                 </div>
+                <br>
+                <div>
+                    <label for="Despreciacion">Despreciacion:</label>
+                    <input type="text" name="Despreciacion" size="30" maxlength="12">
+                </div>
+                <div>
+                    <label for="Gastos_Generales">Gastos Generales:</label>
+                    <input type="text" name="Gastos_Generales" size="30" maxlength="12">
+                </div>
+                <br>
                 <br>
                 <input type="submit" name="enviar" id="enviar" class="btn btn-default" value="Enviar">
             
@@ -58,16 +67,7 @@ $Gastos_Generales=$_REQUEST['Gastos_Generales'];
 //Insercion de datos
 $sql = "INSERT INTO sif_tfp (Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales)
 VALUES ('$Beneficio_bruto', '$Impuestos', '$Intereses', '$Despreciacion', '$Gastos_Generales')";
-
-if (mysqli_query($conexion, $sql)) 
-{
-  echo "<font color='green'>Registro añadido correctamente.</font>";
-} 
-else 
-{
-  echo "Error: No se pudieron introducir los datos.<br>" . mysqli_error($conexion);
-}
-      
+  
 mysqli_close($conexion);
 ?>
 
