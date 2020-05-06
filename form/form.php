@@ -73,7 +73,15 @@
   //Insercion de datos
   $sql = "INSERT INTO DATOS_ACTIVOS (ANO, Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales)
   VALUES ('$ejercicio', '$Beneficio_bruto', '$Impuestos', '$Intereses', '$Despreciacion', '$Gastos_Generales')";
-
+  if (mysqli_query($conexion, $sql)) 
+  {
+    echo "Registro añadido correctamente";
+  } 
+  else 
+  {
+    echo "Error: No se pudieron introducir los datos" . mysqli_error($conexion);
+  }
+  
   ?>
 
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
