@@ -19,7 +19,6 @@
 include 'conexion.php';
 ?>
   
-<?php
         <div class="container">
         <H1>Datos de cliente</H1><BR>
             <form name="vivienda" action="form.php" method="POST" enctype="multipart/form-data">
@@ -45,11 +44,9 @@ include 'conexion.php';
             
             </div>
             </fieldset>
-
             </form>
-        
-
             </div>
+      
 <?php
         //Facilitamos recogida de datos con variables sencillas
 $direccion=$_REQUEST['direccion'];
@@ -72,22 +69,12 @@ else
 {
   echo "Error: No se pudieron introducir los datos.<br>" . mysqli_error($conexion);
 }
-
-
-//Fin del bucle de imagenes
-
+      
 mysqli_close($conexion);
-
-
-
-
-
-
-   
 ?>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     </body>
 </html>
