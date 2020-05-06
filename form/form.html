@@ -8,42 +8,12 @@
 </head>
     <body>
 <?php
-include 'seguridad.php';
+include 'conexion.php';
 ?>
 
 <div class="menu">
   <div class="text-center">
     <div class="btn-group" role="group" aria-label="...">
-
-    <div class="btn-group">
-      <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Sesión
-      </button>
-      <div class="dropdown-menu">
-        <ul>
-        <li>IP:
-            <?php
-          $ip = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
-          echo $ip;
-            ?>
-
-
-
-        </li>
-        <li>Usuario:
-            <?php
-            echo $_SESSION["nombre"];
-            ?>
-        </li>
-        </ul>
-
-        <div class="dropdown-divider"></div>
-        <a class="dropdown-item" href="logout.php">Salir</a>
-      </div>
-    </div>
-    <a class="btn btn-primary" href="menu.php" role="button">Volver al menú</a>
-
-    </div>
   </div>
 </div>
 
@@ -51,42 +21,9 @@ include 'seguridad.php';
 <?php
 #Abrimos conexion con mysql
 include 'conexion.php';
-
-// la variable $extra recoje una cadena con los extras introducidos
-// la variable count cuenta el nº de opciones elegidas como extras
-$extra=$_REQUEST['extra'];
-$count=count($extra);
-$fotos_mal=0;
 ?>
+  
 <?php
-if(isset($_REQUEST['enviar']))
-{
-            if ($_FILES["archivo"]["name"][0]) //Si se introduce foto hace lo demás
-              {
-              for ($i=0;$i<count($_FILES["archivo"]["name"]);$i++)
-                {
-                /*Validacion de imagenes con formato y tamaño. Si no cumple con formato o el tamaño es superior a 1MB entonces la variable
-                $fotos_mal se pone en 1 y no se meten*/
-                if ((!$_FILES["archivo"]["type"][$i]=="image/jpeg") || (!$_FILES["archivo"]["type"][$i]=="image/bmp") || 
-                  (!$_FILES["archivo"]["type"][$i]=="image/gif") || (!$_FILES["archivo"]["type"][$i]=="image/png") || 
-                  ($_FILES["archivo"]["size"][$i]>1000000) )
-                    {
-                      $fotos_mal=1; //Si el archivo es malo no se meten porque en la validacion general no está en !==1
-                      //Si el error ha entrado por la parte de tipo de archivo, entonces $fallo_tipo se pone en 1
-                      if ((!$_FILES["archivo"]["type"][$i]=="image/jpeg") || (!$_FILES["archivo"]["type"][$i]=="image/bmp") || 
-                         (!$_FILES["archivo"]["type"][$i]=="image/gif") || (!$_FILES["archivo"]["type"][$i]=="image/png"))
-                        {$fallo_tipo=1;}
-                      //Si el error ha entrado por la parte de tamaño $fallo_tamaño se pone en 1
-                      if ($_FILES["archivo"]["size"][$i]>1000000)
-                        {$fallo_tamaño=1;}
-                    }
- 
-                } 
-             }
-            else //Si no se mete archivo el error de no meter se pone en 1 y lo usamos en errores.
-            $fallo_ninguno=1;
-}
-?>
         <div class="container">
         <H1>Inserción de vivienda</H1><BR>
             <form name="vivienda" action="proyecto.php" method="POST" enctype="multipart/form-data">
@@ -97,70 +34,16 @@ if(isset($_REQUEST['enviar']))
                     <label for="tipo">*Tipo de vivienda:</label>
                     <select id="tipo" name="tipo">
                         <option selected="selected" value="selected">-seleccione-</option>
-<!-- Hacemos una consulta a todos los tipos en mysql -->
-                                             <?php
-
-                                              $tipos = "SELECT id,descripcion FROM tipo";
-                                              $resultado = mysqli_query($conexion,$tipos);
-                                              while ($fila=mysqli_fetch_assoc($resultado))
-                                              {
-                                                //Por cada resultado se hace un option>
-                                                echo "<option ";
-                                                //Para dejarlo marcado
-                                                if(isset($_REQUEST['enviar'])) 
-                                                {
-                                                  if($_REQUEST['tipo']==$fila['id'])
-                                                    {echo "selected=".$fila['id'];}
-                                                }
-                                                echo " value='".$fila['id']."'>".$fila['descripcion']."</option>";
-                                              }
-                                              ?> 
-                                                      
+<!-- Hacemos una consulta a todos los tipos en mysql -->                                                   
                     </select>
-                    <?php
-                    //Si el valor está selected (-seleccione-) entonces se muestra el mensaje de error
-                     if(isset($_REQUEST['enviar']))
-                     {
-                       if ($_REQUEST['tipo']=='selected')
-                          {
-                          echo "<font color='red'>El tipo de vivienda es obligatorio.</font>";
-                          }
-                      }
-                    ?>
+ 
              </div><br>
 
             <div>
                 <label for="zona">*Zona:</label>
                     <select id="zona" name="zona">
-                        <option selected="selected" value="selected">-seleccione-</option>
-                                              <?php
-
-                                              $zonas = "SELECT id,nombre FROM zona";
-                                              $resultado = mysqli_query($conexion,$zonas);
-                                              while ($fila=mysqli_fetch_assoc($resultado))
-                                              {
-                                                echo "<option ";
-                                                if(isset($_REQUEST['enviar'])) 
-                                                {
-                                                  if($_REQUEST['zona']==$fila['id'])
-                                                    {echo "selected=".$fila['id'];}
-                                                }
-                                                echo " value='".$fila['id']."'>".$fila['nombre']."</option>";
-                                              }
-                                              ?> 
-                                                      
+                        <option selected="selected" value="selected">-seleccione-</option>                                               
                     </select>
-                    <?php
-                    //Si está el selected por defecto da error.
-                     if(isset($_REQUEST['enviar']))
-                     {
-                       if ($_REQUEST['zona']=='selected')
-                          {
-                          echo "<font color='red'>La zona de vivienda es obligatoria.</font>";
-                          }
-                      }
-                    ?>
-
             </div><br>
          <br>
 
@@ -178,90 +61,11 @@ if(isset($_REQUEST['enviar']))
                       }
                     ?>  
                     name="direccion" size="30" maxlength="50" placeholder="Introduzca la direccion">
-                     <?php
-                     //Si no se rellena y está vacio el campo da error
-                     if(isset($_REQUEST['enviar']))
-                     {
-                       if ($_REQUEST['direccion']=="")
-                          {
-                          echo "<font color='red'>La dirección de vivienda es obligatoria.</font>";
-                          }
-                      }
-                    ?>   
+   
                 </div>            
                 <br><br>
 
-                <div>
-                    <label for="dormitorios">*Numero de dormitorios:</label>
-                    <input type="radio" name="dormitorios" id="1" value="1"                     
-                    <?php
-                    //Si se selecciona el 1, entonces se crea una opción de checked para ese valor
-                    //Mediante el if va a irse al bloque correcto para poner en checked ese valor
-                    if(isset($_REQUEST['enviar']))
-                    {
-                      if ($_REQUEST['dormitorios']=="1")
-                        {
-                          echo "checked='checked'";
-                        }
-                    }
-                    ?>
-                    >1
-                    <input type="radio" name="dormitorios" id="2" value="2"
-                    <?php
-                    if(isset($_REQUEST['enviar']))
-                    {
-                      if ($_REQUEST['dormitorios']=="2")
-                        {
-                          echo "checked='checked'";
-                        }
-                    }
-                    ?>
-                    >2
-                    <input type="radio" name="dormitorios" id="3" value="3"
-                    <?php
-                    if(isset($_REQUEST['enviar']))
-                    {
-                      if ($_REQUEST['dormitorios']=="3")
-                        {
-                          echo "checked='checked'";
-                        }
-                    }
-                    ?>
-                    >3
-                    <input type="radio" name="dormitorios" id="4" value="4"
-                    <?php
-                    if(isset($_REQUEST['enviar']))
-                    {
-                      if ($_REQUEST['dormitorios']=="4")
-                        {
-                          echo "checked='checked'";
-                        }
-                    }
-                    ?>
-                    >4
-                    <input type="radio" name="dormitorios" id="5" value="5"
-                    <?php
-                    if(isset($_REQUEST['enviar']))
-                    {
-                      if ($_REQUEST['dormitorios']=="5")
-                        {
-                          echo "checked='checked'";
-                        }
-                    }
-                    ?>
-                    >5
-                    <?php
-                    //Si nº de dorm. esta vacio hay error
-                    if(isset($_REQUEST['enviar']))
-                    {
-                      if ($_REQUEST['dormitorios']=="")
-                      {
-                        echo "<font color='red'>El número de dormitorios es obligatorio.</font>";
-                      }
-                    }
-                    ?>
-                </div><BR>
-
+         
                  <div>
                     <label for="precio">*Precio:</label>
                     <input type="text"  
@@ -336,64 +140,7 @@ if(isset($_REQUEST['enviar']))
                     ?><BR><BR>
                 </div><BR>
 
-                <div>
-                    <label for="extra">Extras:</label>
-                     <?php
-                     /* Hace una consulta sacando los extras. Por cada uno va a hacer un input para mostrarlo*/
-                     $extras = "SELECT id,descripcion FROM extras";
-                     $resultado = mysqli_query($conexion,$extras);
-                     while ($fila=mysqli_fetch_assoc($resultado))
-                      {
-                      echo "<input type='checkbox' name='extra[]'' id='".$fila['id']."' value='".$fila['id']."'";
-                      if (isset($_REQUEST['enviar']) and in_array($fila['id'], $_REQUEST['extra']))
-                      {
-                      //Se crea una opcion de checked
-                      echo "checked='checked'";
-                      }
-                       echo ">".$fila['descripcion'];
-                      }
-                      ?> 
-                </div><BR>
-                <div>
-                    <label for="foto">Foto:</label>
-                    <input type="file" name="archivo[]" multiple="">
-                    <?php
-                    //Revisamos que esté seteado
-                    if (isset($_REQUEST['enviar']))
-                    {
-                      //Si el fallo es por no subir ninguna foto muestra el error propio
-                      if ($fallo_ninguno==1)
-                        {
-                        echo "<font color='red'>Es obligatorio introducir al menos una imagen.</font>";
-                        }
-                      else //Sino, es decir, si se ha subido, entonces pasa a comprobar tamaño y tipo
-                      {
-                        if ($fallo_tipo==1)
-                          {
-                          echo "<font color='red'>Alguna de las imágenes no cumple con el formato de imagen (png, jpeg, gif o bmp).</font>";
-                          }
-                        if ($fallo_tamaño==1)
-                          {
-                          echo "<font color='red'>Alguna de las imágenes es mayor de 2MB.</font>";
-                          }
-                      }
-                    }
-                    ?>                
-                </div><br>
-                <div>
-                    <label for="observaciones">Observaciones:</label><BR>
-                    <TEXTAREA COLS=60 ROWS=8 NAME="observaciones">
-                    <?php
-                    //Si se mete una observacion simplemente hacemos un echo de la variable
-                    if(isset($_REQUEST['enviar']))
-                    {
-                      if ($_REQUEST['observaciones']!=="")
-                      {
-                        echo $_REQUEST['observaciones'];
-                      }
-                    }
-                    ?></TEXTAREA> 
-                </div><BR><BR>
+               
 
  
             <input type="submit" name="enviar" id="enviar" class="btn btn-default" value="Insertar vivienda">
@@ -406,12 +153,6 @@ if(isset($_REQUEST['enviar']))
 
             </div>
 <?php
-//Si se cumple todo lo siguiente quiere decir que el formulario está relleno correctamente, por tanto se envian imagenes y se hace conexión
-    if (($_REQUEST['tipo']!=="-seleccione-") and ($_REQUEST['zona']!=="-seleccione-") and ($_REQUEST['direccion']!=="") 
-      and ($_REQUEST['dormitorios']!=="") and ($_REQUEST['precio']!=="") and ($_REQUEST['tamano']!=="") and (is_numeric($_REQUEST['precio'])) 
-      and (is_numeric($_REQUEST['tamano'])) and ($fotos_mal!==1) and ($fallo_ninguno!==1)  )
-      { 
-
         //Facilitamos recogida de datos con variables sencillas
 $direccion=$_REQUEST['direccion'];
 $precio=$_REQUEST['precio'];
