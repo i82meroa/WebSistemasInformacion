@@ -49,17 +49,15 @@ include 'conexion.php';
       
 <?php
         //Facilitamos recogida de datos con variables sencillas
-$direccion=$_REQUEST['direccion'];
-$precio=$_REQUEST['precio'];
-$tamano=$_REQUEST['tamano'];
-$dormitorios=$_REQUEST['dormitorios'];
-$observaciones=$_REQUEST['observaciones'];
-$zona=$_REQUEST['zona'];
-$tipo=$_REQUEST['tipo'];
+$Beneficio_bruto=$_REQUEST['Beneficio_bruto'];
+$Impuestos=$_REQUEST['Impuestos'];
+$Intereses=$_REQUEST['Intereses'];
+$Despreciacion=$_REQUEST['Despreciacion'];
+$Gastos_Generales=$_REQUEST['Gastos_Generales'];
 
 //Insercion de datos
-$sql = "INSERT INTO inmuebles (direccion, precio, tamano, num_dorm, observaciones, zona, tipo)
-VALUES ('$direccion', '$precio', '$tamano', '$dormitorios', '$observaciones', '$zona','$tipo')";
+$sql = "INSERT INTO sif_tfp (Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales)
+VALUES ('$Beneficio_bruto', '$Impuestos', '$Intereses', '$Despreciacion', '$Gastos_Generales')";
 
 if (mysqli_query($conexion, $sql)) 
 {
