@@ -40,7 +40,7 @@
         }
         mysqli_close($conexion);
 
-        echo "<table><tr><th>AÑO</th><th>Número de ventas</th></tr>";
+        echo "<table border='1'><tr><th>AÑO</th><th>Número de ventas</th></tr>";
 
           $sql = "SELECT ANO, N_VENTAS FROM VARIABLES";
           $result = mysqli_query($conexion, $sql);
