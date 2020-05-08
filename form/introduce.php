@@ -52,19 +52,8 @@
           echo "No hay ningun dato de la tabla VARIABLE";
         }
 
-        $sql = "SELECT ANO, N_VENTAS FROM VARIABLES";
-        $result = mysqli_query($conexion, $sql); 
-        if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Número de ventas</th></tr>";
-            while($row = mysqli_fetch_assoc($result)) {
-              echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td></tr>";
-            }
-          echo "</table>";
-        }else {
-          echo "No hay ningun dato de la tabla VARIABLE";
-        }
 
-        $sql = "SELECT * FROM DATOS_VARIABLES";
+        $sql = "SELECT * FROM DATOS_ACTIVOS";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
           echo "<table border='1'><tr><th>AÑO</th><th>Beneficio bruto</th><th>Intereses</th><th>Despreciacion</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
@@ -73,7 +62,7 @@
             }
           echo "</table>";
         }else {
-          echo "No hay ningun dato de la tabla VARIABLE";
+          echo "No hay ningun dato de la tabla Datos Activos";
         }
 
         mysqli_close($conexion);
