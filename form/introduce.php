@@ -49,7 +49,7 @@
           $sql = "SELECT * FROM VARIABLES";
           $result = mysqli_query($conexion, $sql);
           while($row = mysqli_fetch_assoc($result)) {
-            echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td><tr>"
+            echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td></tr>"
           }
         echo "</table>";
       ?>
