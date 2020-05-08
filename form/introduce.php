@@ -68,21 +68,21 @@
         }
  
         $sql = "INSERT INTO DATOS_MARKETING
-        VALUES ('$clics', '$impresiones', '$capacidadactual', '$capacidadmaxima')";
+        VALUES ('$ejercicio', '$clics', '$impresiones', '$capacidadactual', '$capacidadmaxima')";
         if (!mysqli_query($conexion, $sql)) 
         {
           echo "Error: No se pudieron introducir los datos de Datos Marketing <br>" . mysqli_error($conexion);
         }
 
         $sql = "INSERT INTO DATOS_PASIVOS
-        VALUES ('$capital', '$fondospropios')";
+        VALUES ('$ejercicio', '$capital', '$fondospropios')";
         if (!mysqli_query($conexion, $sql)) 
         {
           echo "Error: No se pudieron introducir los datos de Datos pasivos <br>" . mysqli_error($conexion);
         } 
       
         $sql = "INSERT INTO PERDIDAS_GANANCIAS
-        VALUES ('$amortizaciones', '$provisiones')";
+        VALUES ('$ejercicio', '$amortizaciones', '$provisiones')";
         if (!mysqli_query($conexion, $sql)) 
         {
           echo "Error: No se pudieron introducir los datos de Perdidas y ganancias <br>" . mysqli_error($conexion);
