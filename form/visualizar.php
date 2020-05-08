@@ -36,12 +36,12 @@
         $Ventas=$_POST['Ventas'];
         
 
-        $sql = "SELECT ANO, N_VENTAS FROM VARIABLES";
+        $sql = "SELECT * FROM VARIABLES";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Número de ventas</th></tr>";
+          echo "<table border='1'><tr><th>AÑO</th><th>Número de ventas</th><th>Número de clientes potenciales</th><th>Número de ventas totales</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
-              echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td></tr>";
+              echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td><td>".$row["n_clientes_potenciales"]."</td><td>".$row["N_VENTAS_TOTALES"]."</td></tr>";
             }
           echo "</table>";
         }else {
@@ -52,9 +52,9 @@
         $sql = "SELECT * FROM DATOS_ACTIVOS";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Beneficio bruto</th><th>Intereses</th><th>Despreciacion</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
+          echo "<table border='1'><tr><th>AÑO</th><th>Beneficio bruto</th><th>Impuestos</th><th>Intereses</th><th>Despreciacion</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
-              echo "<tr><td>".$row["ANO"]."</td><td>".$row["Beneficio_bruto"]."</td><td>".$row["Intereses"]."</td><td>".$row["Despreciacion"]."</td><td>".$row["Gastos_Generales"]."</td><td>".$row["Inversiones"]."</td><td>".$row["TOTAL_ACTIVOS"]."</td></tr>";
+              echo "<tr><td>".$row["ANO"]."</td><td>".$row["Beneficio_bruto"]."</td><td>".$row["Impuestos"]."</td><td>".$row["Intereses"]."</td><td>".$row["Despreciacion"]."</td><td>".$row["Gastos_Generales"]."</td><td>".$row["Inversiones"]."</td><td>".$row["TOTAL_ACTIVOS"]."</td></tr>";
             }
           echo "</table>";
         }else {
