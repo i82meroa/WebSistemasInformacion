@@ -48,7 +48,7 @@
 
           $sql = "SELECT * FROM VARIABLES";
           $result = mysqli_query($conexion, $sql);
-          while($row = $result->fetch_assoc()) {
+          while($row = mysqli_fetch_assoc($result)) {
             echo "<td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td>"
           }
         echo "</table>";
