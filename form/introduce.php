@@ -33,31 +33,61 @@
         $Intereses=$_POST['Intereses'];
         $Despreciacion=$_POST['Despreciacion'];
         $Gastos_Generales=$_POST['Gastos_Generales'];
+        $Inversiones=$_POST['Inversiones'];
+        $totalactivos=$_POST['totalactivos'];
+      
         $Ventas=$_POST['Ventas'];
+        $clientespotenciales=$_POST['clientes_potenciales'];
+        $ventastotales=$_POST['ventastotales'];
+      
+        $clics=$_POST['Clics'];
+        $impresiones=$_POST['Impresiones'];
+        $capacidadactual=$_POST['capacidadactual'];
+        $capacidadmaxima=$_POST['capacidadmaxima'];
+      
+        $capital=$_POST['capital'];
+        $fondospropios=$_POST['fondospropios'];
+      
+        $amortizaciones=$_POST['Amortizaciones'];
+        $provisiones=$_POST['provisiones'];
+      
 
         //Insercion de datos
-        $sql = "INSERT INTO DATOS_ACTIVOS (ANO, Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales)
-        VALUES ('$ejercicio', '$Beneficio_bruto', '$Impuestos', '$Intereses', '$Despreciacion', '$Gastos_Generales')";
-        if (mysqli_query($conexion, $sql)) 
+        $sql = "INSERT INTO DATOS_ACTIVOS (ANO, Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales, Inversiones, TOTAL_ACTIVOS)
+        VALUES ('$ejercicio', '$Beneficio_bruto', '$Impuestos', '$Intereses', '$Despreciacion', '$Gastos_Generales', '$inversiones', '$totalactivos')";
+        if (!mysqli_query($conexion, $sql))  
         {
-          echo "Registro de 'Datos Activos' añadido correctamente <br>";
-        } 
-        else 
-        {
-          echo "Error: No se pudieron introducir los datos de 'Datos activos' <br>" . mysqli_error($conexion);
+          echo "Error: No se pudieron introducir los datos de Datos activos <br>" . mysqli_error($conexion);
         }
-        $sql = "INSERT INTO VARIABLES (ANO, N_VENTAS)
-        VALUES ('$ejercicio', '$Ventas')";
-        if (mysqli_query($conexion, $sql)) 
+      
+        $sql = "INSERT INTO VARIABLES (ANO, N_VENTAS, n_clientes_potenciales, N_VENTAS_TOTALES)
+        VALUES ('$ejercicio', '$Ventas', '$clientespotenciales', '$ventastotales')";
+        if (!mysqli_query($conexion, $sql)) 
         {
-          echo "Registro de 'VARIABLES' añadido correctamente <br>";
-        } 
-        else 
-        {
-          echo "Error: No se pudieron introducir los datos de 'VARIABLES' <br>" . mysqli_error($conexion);
+          echo "Error: No se pudieron introducir los datos de Variables <br>" . mysqli_error($conexion);
         }
-        
+ 
+        $sql = "INSERT INTO DATOS_MARKETING
+        VALUES ('$clics', '$impresiones', '$capacidadactual', '$capacidadmaxima')";
+        if (!mysqli_query($conexion, $sql)) 
+        {
+          echo "Error: No se pudieron introducir los datos de Datos Marketing <br>" . mysqli_error($conexion);
+        }
 
+        $sql = "INSERT INTO DATOS_PASIVOS
+        VALUES ('$capital', '$fondospropios')";
+        if (!mysqli_query($conexion, $sql)) 
+        {
+          echo "Error: No se pudieron introducir los datos de Datos pasivos <br>" . mysqli_error($conexion);
+        } 
+      
+        $sql = "INSERT INTO PERDIDAS_GANANCIAS
+        VALUES ('$amortizaciones', '$provisiones')";
+        if (!mysqli_query($conexion, $sql)) 
+        {
+          echo "Error: No se pudieron introducir los datos de Perdidas y ganancias <br>" . mysqli_error($conexion);
+        }       
+      
         $sql = "SELECT ANO, N_VENTAS FROM VARIABLES";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
