@@ -39,6 +39,19 @@
           echo "Error: No se pudieron introducir los datos de 'VARIABLES' <br>" . mysqli_error($conexion);
         }
         mysqli_close($conexion);
+
+        echo "<table class="egt">
+        <tr>
+          <th>AÑO</th>
+          <th>Número de ventas</th>
+        </tr>";
+
+          $sql = "SELECT * FROM VARIABLES";
+          $result = mysqli_query($conexion, $sql);
+          while($row = $result->fetch_assoc()) {
+            echo "<td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td>"
+          }
+        echo "</table>";
       ?>
    <body>
  </html>
