@@ -9,7 +9,7 @@
         echo "Conección a bd correcta <br>";
      
       //Facilitamos recogida de datos con variables sencillas
-        $ejercicio='2020';
+        $ejercicio=$_POST['ejercicio'];
         $Beneficio_bruto=$_POST['Beneficio_bruto'];
         $Impuestos=$_POST['Impuestos'];
         $Intereses=$_POST['Intereses'];
