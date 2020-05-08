@@ -1,6 +1,23 @@
 <html>
     <head>
       <title>PHP y MySQL</title>
+      <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+      </style>
   </head>
   <body>
       <?php
@@ -51,7 +68,7 @@
         }else {
           echo "No hay ningun dato de la tabla VARIABLE";
         }
-
+        echo "<br>";
 
         $sql = "SELECT * FROM DATOS_ACTIVOS";
         $result = mysqli_query($conexion, $sql); 
