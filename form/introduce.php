@@ -38,16 +38,22 @@
         {
           echo "Error: No se pudieron introducir los datos de 'VARIABLES' <br>" . mysqli_error($conexion);
         }
+        
+
+        $sql = "SELECT ANO, N_VENTAS FROM VARIABLES";
+        $result = mysqli_query($conexion, $sql); 
+        if (mysqli_num_rows($result) > 0) {
+          echo "<table border='1'><tr><th>AÑO</th><th>Número de ventas</th></tr>";
+            while($row = mysqli_fetch_assoc($result)) {
+              echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td></tr>";
+            }
+          echo "</table>";
+        }else {
+          echo "No hay ningun dato de la tabla VARIABLE";
+        }
+
+
         mysqli_close($conexion);
-
-        echo "<table border='1'><tr><th>AÑO</th><th>Número de ventas</th></tr>";
-
-          $sql = "SELECT ANO, N_VENTAS FROM VARIABLES";
-          $result = mysqli_query($conexion, $sql);
-          while($row = mysqli_fetch_assoc($result)) {
-            echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td></tr>";
-          }
-        echo "</table>";
       ?>
    <body>
  </html>
