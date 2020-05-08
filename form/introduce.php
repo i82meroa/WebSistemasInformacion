@@ -40,16 +40,12 @@
         }
         mysqli_close($conexion);
 
-        echo "<table class="egt">
-        <tr>
-          <th>AÑO</th>
-          <th>Número de ventas</th>
-        </tr>";
+        echo "<table><tr><th>AÑO</th><th>Número de ventas</th></tr>";
 
-          $sql = "SELECT * FROM VARIABLES";
+          $sql = "SELECT ANO, N_VENTAS FROM VARIABLES";
           $result = mysqli_query($conexion, $sql);
           while($row = mysqli_fetch_assoc($result)) {
-            echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td></tr>"
+            echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td></tr>";
           }
         echo "</table>";
       ?>
