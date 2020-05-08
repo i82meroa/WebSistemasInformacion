@@ -29,7 +29,7 @@
           echo "Error: No se pudieron introducir los datos de 'Datos activos' <br>" . mysqli_error($conexion);
         }
         $sql = "INSERT INTO VARIABLES (ANO, N_VENTAS)
-        VALUES ('$ejercicio', '$VENTAS')";
+        VALUES ('$ejercicio', '$Ventas')";
         if (mysqli_query($conexion, $sql)) 
         {
           echo "Registro de 'VARIABLES' añadido correctamente <br>";
