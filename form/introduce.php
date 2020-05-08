@@ -11,8 +11,11 @@
         $bd="sif_tfp";
         echo "Segundo echo OK";
         // Creamos la conexión pasándole el servidor, nombre de user, y clave. Si no se establece conexión muestra un error.
-        $conexion = mysqli_connect($servername, $username, $password, $bd);
-      
+        //$conexion = mysqli_connect($servername, $username, $password, $bd);
+        $mysqli = new mysqli("localhost", "usuario", "contraseña", "basedatos");
+        if ($mysqli->connect_errno) {
+            echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+        }
         echo "Conección a bd correcta";
         //Facilitamos recogida de datos con variables sencillas
         $ejercicio='2020';
