@@ -53,8 +53,8 @@
       
 
         //Insercion de datos
-        $sql = "INSERT INTO DATOS_ACTIVOS (ANO, Beneficio_bruto, Impuestos, Intereses, Despreciacion, Gastos_Generales, Inversiones, TOTAL_ACTIVOS)
-        VALUES ('$ejercicio', '$Beneficio_bruto', '$Impuestos', '$Intereses', '$Despreciacion', '$Gastos_Generales', '$inversiones', '$totalactivos')";
+        $sql = "INSERT INTO DATOS_ACTIVOS
+        VALUES ('$ejercicio', '$Beneficio_bruto', '$Impuestos', '$Intereses', '$Despreciacion', '$Gastos_Generales', '$Inversiones', '$totalactivos')";
         if (!mysqli_query($conexion, $sql))  
         {
           echo "Error: No se pudieron introducir los datos de Datos activos <br>" . mysqli_error($conexion);
