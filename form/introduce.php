@@ -6,6 +6,7 @@
           font-family: arial, sans-serif;
           border-collapse: collapse;
           width: 100%;
+          background-color: white;
         }
 
         td, th {
