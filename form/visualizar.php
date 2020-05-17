@@ -61,6 +61,42 @@
           echo "No hay ningun dato de la tabla Datos Activos";
         }
 
+        $sql = "SELECT * FROM DATOS_PASIVOS";
+        $result = mysqli_query($conexion, $sql); 
+        if (mysqli_num_rows($result) > 0) {
+          echo "<table border='1'><tr><th>AÑO</th><th>Capital</th><th>Fondos propios</th></tr>";
+            while($row = mysqli_fetch_assoc($result)) {
+              echo "<tr><td>".$row["ANO"]."</td><td>".$row["CAPITAL"]."</td><td>".$row["FONDOS_PROPIOS"]."</td></tr>";
+            }
+          echo "</table>";
+        }else {
+          echo "No hay ningun dato de la tabla Datos Activos";
+        }
+
+        $sql = "SELECT * FROM DATOS_MARKETING";
+        $result = mysqli_query($conexion, $sql); 
+        if (mysqli_num_rows($result) > 0) {
+          echo "<table border='1'><tr><th>AÑO</th><th>Clics</th><th>Impresiones</th><th>Capacidad actual</th><th>Capacidad máxima</th></tr>";
+            while($row = mysqli_fetch_assoc($result)) {
+              echo "<tr><td>".$row["ANO"]."</td><td>".$row["Clics"]."</td><td>".$row["Impresiones"]."</td><td>".$row["CAPACIDAD_ACTUAL"]."</td><td>".$row["CAPACIDAD_MAXIMA"]."</td></tr>";
+            }
+          echo "</table>";
+        }else {
+          echo "No hay ningun dato de la tabla Datos Activos";
+        }
+
+        $sql = "SELECT * FROM PERDIDAS_GANANCIAS";
+        $result = mysqli_query($conexion, $sql); 
+        if (mysqli_num_rows($result) > 0) {
+          echo "<table border='1'><tr><th>AÑO</th><th>Amortizaciones</th><th>Provisiones</th></tr>";
+            while($row = mysqli_fetch_assoc($result)) {
+              echo "<tr><td>".$row["ANO"]."</td><td>".$row["Amortizaciones"]."</td><td>".$row["Provisiones"]."</td></tr>";
+            }
+          echo "</table>";
+        }else {
+          echo "No hay ningun dato de la tabla Datos Activos";
+        }
+
         mysqli_close($conexion);
       ?>
    <body>
