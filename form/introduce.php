@@ -112,6 +112,7 @@
         }else {
           echo "No hay ningun dato de la tabla Datos Activos";
         }
+        echo "<br>";
 
         $sql = "SELECT * FROM DATOS_PASIVOS";
         $result = mysqli_query($conexion, $sql); 
@@ -124,6 +125,7 @@
         }else {
           echo "No hay ningun dato de la tabla Datos Activos";
         }
+        echo "<br>";
 
         $sql = "SELECT * FROM DATOS_MARKETING";
         $result = mysqli_query($conexion, $sql); 
@@ -136,6 +138,7 @@
         }else {
           echo "No hay ningun dato de la tabla Datos Activos";
         }
+        echo "<br>";
 
         $sql = "SELECT * FROM PERDIDAS_GANANCIAS";
         $result = mysqli_query($conexion, $sql); 
@@ -148,6 +151,7 @@
         }else {
           echo "No hay ningun dato de la tabla Datos Activos";
         }
+        echo "<br>";
 
         mysqli_close($conexion);
       ?>
