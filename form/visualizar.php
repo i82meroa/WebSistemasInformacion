@@ -71,7 +71,7 @@
             }
           echo "</table>";
         }else {
-          echo "No hay ningun dato de la tabla Datos Activos";
+          echo "No hay ningun dato de la tabla DATOS_PASIVOS";
         }
         echo "<br>";
 
@@ -84,7 +84,7 @@
             }
           echo "</table>";
         }else {
-          echo "No hay ningun dato de la tabla Datos Activos";
+          echo "No hay ningun dato de la tabla DATOS_MARKETING";
         }
         echo "<br>";
 
@@ -97,9 +97,10 @@
             }
           echo "</table>";
         }else {
-          echo "No hay ningun dato de la tabla Datos Activos";
+          echo "No hay ningun dato de la tabla PERDIDAS_GANANCIAS";
         }
         echo "<br>";
+
 
         mysqli_close($conexion);
       ?>
