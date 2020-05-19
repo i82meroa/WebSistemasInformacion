@@ -663,7 +663,8 @@ let espPopChart9 = new Chart(myChart9, {
 						],
         label: "ROE",
         borderColor: "rgba(255, 99, 132, 0.6)",
-        fill: true
+        fill: true,
+        pointBackgroundColor: "rgba(255, 99, 132, 0.2)",
       }
     ]
   },
