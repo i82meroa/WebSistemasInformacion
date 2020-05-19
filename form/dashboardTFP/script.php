@@ -713,7 +713,8 @@ let espPopChart9 = new Chart(myChart9, {
 							roe[1],
 							roe[2],
               roe[3],
-              roe[4]
+              roe[4],
+              roe[5]
 						],
         label: "ROE",
         borderColor: "rgba(255, 99, 132, 0.6)",
@@ -878,7 +879,7 @@ let espPopChart10 = new Chart(myChart10, {
         left:0,
         right:0,
         bottom:0,
-        top:25
+        top:0
       }
     },
     legend: {
