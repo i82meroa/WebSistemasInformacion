@@ -238,7 +238,7 @@ let espPopChart1 = new Chart(myChart1, {
               beneficioneto[5]
 						],
         label: "Beneficio Neto",
-        borderColor: "#3e95cd",
+        borderColor: "rgba(255, 99, 132, 0.6)",
         fill: false
       }
     ]

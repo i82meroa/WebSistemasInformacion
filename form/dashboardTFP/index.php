@@ -208,12 +208,12 @@
               </div>
               <div class="col-xl-3 col-sm-6 p-2">
                 <div class="card card-common p-3 my-auto">
-                  <canvas id="myChart6" height="250"></canvas>
+                  <canvas id="myChart7" height="250"></canvas>
                 </div>
               </div>
               <div class="col-xl-3 col-sm-6 p-2">
                 <div class="card card-common p-3 my-auto">
-                  <canvas id="myChart7" height="250"></canvas>
+                  <canvas id="myChart6" height="250"></canvas>
                 </div>
               </div>
               <div class="col-xl-3 col-sm-6 p-2">
