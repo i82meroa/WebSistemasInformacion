@@ -558,7 +558,7 @@ let espPopChart7 = new Chart(myChart7, {
               roce[5]
 						],
         label: "ROCE",
-        borderColor: "rgba(255, 159, 64, 0.6)",
+        borderColor: "rgba(153, 102, 255, 0.6)",
         fill: false
       }
     ]
@@ -690,7 +690,7 @@ let espPopChart9 = new Chart(myChart9, {
 
 //-------------------------------------------------
 
-
+/*
 let myChart10 = document.getElementById('myChart10').getContext('2d');
 let cur = <?php echo json_encode($CUR);?>;
 
@@ -740,9 +740,110 @@ let espPopChart10 = new Chart(myChart10, {
       enabled:true
     }
   }
+});*/
+
+
+
+
+
+
+let myChart10 = document.getElementById('myChart10').getContext('2d');
+let cur = <?php echo json_encode($CUR);?>;
+
+let espPopChart10 = new Chart(myChart10, {
+  type:'bubble', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
+  data: {
+    labels: "Africa",
+    datasets: [
+      {
+        label: ["2015"],
+        backgroundColor: "rgba(255,221,50,0.2)",
+        borderColor: "rgba(255,221,50,1)",
+        data: [{
+          x: 2015,
+          y: cur[0]
+          r: 65
+        }]
+      }, {
+        label: ["2016"],
+        backgroundColor: "rgba(60,186,159,0.2)",
+        borderColor: "rgba(60,186,159,1)",
+        data: [{
+          x: 2016,
+          y: cur[1],
+          r: 15
+        }]
+      }, {
+        label: ["2017"],
+        backgroundColor: "rgba(0,0,0,0.2)",
+        borderColor: "#000",
+        data: [{
+          x: 2017,
+          y: cur[2],
+          r: 30
+        }]
+      }, {
+        label: ["2018"],
+        backgroundColor: "rgba(193,46,12,0.2)",
+        borderColor: "rgba(193,46,12,1)",
+        data: [{
+          x: 2018,
+          y: cur[3],
+          r: 40
+        }]
+      }, {
+        label: ["2019"],
+        backgroundColor: "rgba(0,0,0,0.2)",
+        borderColor: "#000",
+        data: [{
+          x: 2019,
+          y: cur[4]
+          r: 30
+        }]
+      }, {
+        label: ["2020"],
+        backgroundColor: "rgba(193,46,12,0.2)",
+        borderColor: "rgba(193,46,12,1)",
+        data: [{
+          x: 2020,
+          y: cur[5],
+          r: 40
+        }]
+      }
+    ]
+  },
+  options: {
+    title: {
+      display: true,
+      text: 'Predicted world population (millions) in 2050',
+      fontSize:15
+    }, scales: {
+      yAxes: [{ 
+        scaleLabel: {
+          display: true,
+          labelString: "Happiness"
+        }
+      }],
+      xAxes: [{ 
+        scaleLabel: {
+          display: true,
+          labelString: "GDP (PPP)"
+        }
+      }]
+    },
+    layout:{
+      padding:{
+        left:0,
+        right:0,
+        bottom:0,
+        top:0
+      }
+    },
+    tooltips:{
+      enabled:true
+    }
+  }
 });
-
-
 
 
 /*
