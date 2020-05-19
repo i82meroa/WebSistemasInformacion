@@ -558,7 +558,7 @@ let espPopChart7 = new Chart(myChart7, {
               roce[5]
 						],
         label: "ROCE",
-        borderColor: "rgba(255, 206, 86, 0.6)",
+        borderColor: "rgba(255, 159, 64, 0.6)",
         fill: false
       }
     ]
@@ -662,7 +662,7 @@ let espPopChart9 = new Chart(myChart9, {
               roe[5]
 						],
         label: "ROE",
-        borderColor: "#3e95cd",
+        borderColor: "rgba(255, 99, 132, 0.6)",
         fill: false
       }
     ]
