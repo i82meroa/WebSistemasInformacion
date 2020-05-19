@@ -757,7 +757,7 @@ let espPopChart10 = new Chart(myChart10, {
     datasets: [
       {
         label: ["2015"],
-        backgroundColor: "rgba(255,221,50,0.2)",
+        backgroundColor: "rgba(255,221,50,0.6)",
         borderColor: "rgba(255,221,50,1)",
         data: [{
           x: 2015,
@@ -766,7 +766,7 @@ let espPopChart10 = new Chart(myChart10, {
         }]
       }, {
         label: ["2016"],
-        backgroundColor: "rgba(60,186,159,0.2)",
+        backgroundColor: "rgba(60,186,159,0.6)",
         borderColor: "rgba(60,186,159,1)",
         data: [{
           x: 2016,
@@ -775,7 +775,7 @@ let espPopChart10 = new Chart(myChart10, {
         }]
       }, {
         label: ["2017"],
-        backgroundColor: "rgba(0,0,0,0.2)",
+        backgroundColor: "rgba(0,0,0,0.6)",
         borderColor: "#000",
         data: [{
           x: 2017,
@@ -784,30 +784,30 @@ let espPopChart10 = new Chart(myChart10, {
         }]
       }, {
         label: ["2018"],
-        backgroundColor: "rgba(193,46,12,0.2)",
+        backgroundColor: "rgba(193,46,12,0.6)",
         borderColor: "rgba(193,46,12,1)",
         data: [{
           x: 2018,
           y: cur[3],
-          r: 40
+          r: 65
         }]
       }, {
         label: ["2019"],
-        backgroundColor: "rgba(0,0,0,0.2)",
-        borderColor: "#000",
+        backgroundColor: "rrgba(255, 99, 132, 0.6)",
+        borderColor: "rgba(255, 99, 132, 1)",
         data: [{
           x: 2019,
           y: cur[4],
-          r: 30
+          r: 35
         }]
       }, {
         label: ["2020"],
-        backgroundColor: "rgba(193,46,12,0.2)",
-        borderColor: "rgba(193,46,12,1)",
+        backgroundColor: "rgba(153, 102, 255, 0.6)",
+        borderColor: "rgba(153, 102, 255, 1)",
         data: [{
           x: 2020,
           y: cur[5],
-          r: 65
+          r: 30
         }]
       }
     ]
@@ -815,21 +815,8 @@ let espPopChart10 = new Chart(myChart10, {
   options: {
     title: {
       display: true,
-      text: 'Predicted world population (millions) in 2050',
+      text: 'CUR',
       fontSize:15
-    }, scales: {
-      yAxes: [{ 
-        scaleLabel: {
-          display: true,
-          labelString: "Happiness"
-        }
-      }],
-      xAxes: [{ 
-        scaleLabel: {
-          display: true,
-          labelString: "GDP (PPP)"
-        }
-      }]
     },
     layout:{
       padding:{
