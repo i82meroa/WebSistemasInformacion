@@ -535,7 +535,7 @@ let espPopChart7 = new Chart(myChart7, {
 
 
 let myChart8 = document.getElementById('myChart8').getContext('2d');
-let roa = <?php echo json_encode($ROA);?>;
+let roa2 = <?php echo json_encode($ROA);?>;
 
 let espPopChart8 = new Chart(myChart8, {
   type:'bar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
@@ -546,10 +546,10 @@ let espPopChart8 = new Chart(myChart8, {
         label: "ROA",
         backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
         data: [
-						  roa[0],
-							roa[1],
-							roa[2]
-						]
+          roa2[0],
+          roa2[1],
+          roa2[2]
+				]
       }
     ]
   },
