@@ -106,7 +106,7 @@
   $contador=$pos -1;
   $pos =0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $BeneficioNeto[$pos]= $BeneficioBruto[$pos] - $Impuestos[$pos] - $Intereses[$pos] - $Depreciacion[$pos] - $GastosGenerales[$pos];
       $pos = $pos +1;
   }
@@ -115,7 +115,7 @@
   $MargenNeto= array();
   $pos = 0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $MargenNeto[$pos]= $BeneficioNeto[$pos] / $NVentas[$pos];
       $pos = $pos + 1;
   }
@@ -124,7 +124,7 @@
   $EBITDA= array();
   $pos=0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $EBITDA[$pos]= $BeneficioBruto[$pos] + $Provisiones[$pos] + $Amortizaciones[$pos];
       $pos = $pos + 1;
   }
@@ -133,7 +133,7 @@
   $CTR= array();
   $pos=0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $CTR[$pos]= ($Clics[$pos] / $Impresiones[$pos]) * 100 ;
       $pos = $pos + 1;
   }
@@ -142,7 +142,7 @@
   $CPL= array();
   $pos=0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $CPL[$pos]= $Inversiones[$pos] / $NClientesPotenciales[$pos];
       $pos = $pos + 1;
   }
@@ -151,7 +151,7 @@
   $CuotaMercado= array();
   $pos=0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $CuotaMercado[$pos]= $NVentas[$pos] / $NVentasTotales[$pos];
       $pos = $pos + 1;
   }
@@ -160,7 +160,7 @@
   $ROCE= array();
   $pos=0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $ROCE[$pos]= ($BeneficioBruto[$pos] / $Capital[$pos]) * 100;
       $pos = $pos + 1;
   }
@@ -169,7 +169,7 @@
   $ROA= array();
   $pos=0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $ROA[$pos]= $BeneficioNeto[$pos] / $TotalActivos[$pos];
       $pos = $pos + 1;
   }
@@ -178,7 +178,7 @@
   $ROE= array();
   $pos=0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $ROE[$pos]= $BeneficioNeto[$pos] / $FondosPropios[$pos];
       $pos = $pos + 1;
   }
@@ -187,7 +187,7 @@
   $CUR= array();
   $pos=0;
 
-  while( $pos < $contador){
+  while( $pos <= $contador){
       $CUR[$pos]= ($CapacidadActual[$pos] / $CapacidadMaxima[$pos]) * 100;
       $pos = $pos + 1;
   }
