@@ -237,7 +237,6 @@ let espPopChart1 = new Chart(myChart1, {
               beneficioneto[4],
               beneficioneto[5]
 						],
-        label: "Beneficio Neto",
         borderColor: "rgba(255, 99, 132, 0.6)",
         fill: false
       }
@@ -245,7 +244,7 @@ let espPopChart1 = new Chart(myChart1, {
   },
   options: {
     title: {
-      display: false,
+      display: true,
       text: 'Beneficio Neto (en euros)',
       fontSize:15
     },
