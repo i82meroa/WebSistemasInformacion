@@ -222,7 +222,7 @@ let beneficioneto = <?php echo json_encode($BeneficioNeto);?>;
 Chart.defaults.global.defaultFontFamily = 'Montserrat';
 Chart.defaults.global.defaultFontSize = 13;
 Chart.defaults.global.defaultFontColor = '#111';
-//Chart.defaults.global.legend.display = false;
+Chart.defaults.global.legend.display = false;
 
 let espPopChart1 = new Chart(myChart1, {
   type:'line', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
@@ -583,7 +583,7 @@ let espPopChart6 = new Chart(myChart6, {
       }
     },
     legend: {
-      display: false,
+      display: true,
     },
     tooltips:{
       enabled:true
@@ -883,7 +883,7 @@ let espPopChart10 = new Chart(myChart10, {
       }
     },
     legend: {
-      display: false,
+      display: true,
     },
     tooltips:{
       enabled:true
