@@ -116,7 +116,7 @@
   $pos = 0;
 
   while( $pos < $contador){
-      $MargenNeto[$pos]= $BeneficioNeto[$pos] % $NVentas[$pos];
+      $MargenNeto[$pos]= $BeneficioNeto[$pos] / $NVentas[$pos];
       $pos = $pos + 1;
   }
 
@@ -134,7 +134,7 @@
   $pos=0;
 
   while( $pos < $contador){
-      $CTR[$pos]= ($Clics[$pos] % $Impresiones[$pos]) * 100 ;
+      $CTR[$pos]= ($Clics[$pos] / $Impresiones[$pos]) * 100 ;
       $pos = $pos + 1;
   }
 
@@ -143,7 +143,7 @@
   $pos=0;
 
   while( $pos < $contador){
-      $CPL[$pos]= $Inversiones[$pos] % $NClientesPotenciales[$pos];
+      $CPL[$pos]= $Inversiones[$pos] / $NClientesPotenciales[$pos];
       $pos = $pos + 1;
   }
 
@@ -152,7 +152,7 @@
   $pos=0;
 
   while( $pos < $contador){
-      $CuotaMercado[$pos]= $NVentas[$pos] % $NVentasTotales[$pos];
+      $CuotaMercado[$pos]= $NVentas[$pos] / $NVentasTotales[$pos];
       $pos = $pos + 1;
   }
 
@@ -161,7 +161,7 @@
   $pos=0;
 
   while( $pos < $contador){
-      $ROCE[$pos]= ($BeneficioBruto[$pos] % $Capital[$pos]) * 100;
+      $ROCE[$pos]= ($BeneficioBruto[$pos] / $Capital[$pos]) * 100;
       $pos = $pos + 1;
   }
 
@@ -170,7 +170,7 @@
   $pos=0;
 
   while( $pos < $contador){
-      $ROA[$pos]= $BeneficioNeto[$pos] % $TotalActivos[$pos];
+      $ROA[$pos]= $BeneficioNeto[$pos] / $TotalActivos[$pos];
       $pos = $pos + 1;
   }
 
@@ -179,7 +179,7 @@
   $pos=0;
 
   while( $pos < $contador){
-      $ROE[$pos]= $BeneficioNeto[$pos] % $FondosPropios[$pos];
+      $ROE[$pos]= $BeneficioNeto[$pos] / $FondosPropios[$pos];
       $pos = $pos + 1;
   }
 
@@ -188,7 +188,7 @@
   $pos=0;
 
   while( $pos < $contador){
-      $CUR[$pos]= ($CapacidadActual[$pos] % $CapacidadMaxima[$pos]) * 100;
+      $CUR[$pos]= ($CapacidadActual[$pos] / $CapacidadMaxima[$pos]) * 100;
       $pos = $pos + 1;
   }
 
@@ -226,13 +226,15 @@ Chart.defaults.global.defaultFontColor = '#111';
 let espPopChart1 = new Chart(myChart1, {
   type:'line', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       { 
         data: [
 						  beneficioneto[0],
 							beneficioneto[1],
-							beneficioneto[2]
+							beneficioneto[2],
+              beneficioneto[3],
+              beneficioneto[4]
 						],
         label: "Beneficio Neto",
         borderColor: "#3e95cd",
@@ -271,13 +273,15 @@ let margenneto = <?php echo json_encode($MargenNeto);?>;
 let espPopChart2 = new Chart(myChart2, {
   type:'bar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       {
         data: [
 							margenneto[0],
 							margenneto[1],
-							margenneto[2]
+							margenneto[2],
+              margenneto[3],
+              margenneto[4]
 						],
         label: "Margen Neto",
         backgroundColor: "#3e95cd"
@@ -315,14 +319,16 @@ let ebitda = <?php echo json_encode($EBITDA);?>;
 let espPopChart3 = new Chart(myChart3, {
   type:'line', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       {
         
         data: [
 							ebitda[0],
 							ebitda[1],
-							ebitda[2]
+							ebitda[2],
+              ebitda[3],
+              ebitda[4]
 						],
         label: "EBITDA",
         borderColor: "#3e95cd",
@@ -363,15 +369,17 @@ let ctr = <?php echo json_encode($CTR);?>;
 let espPopChart4 = new Chart(myChart4, {
   type:'horizontalBar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       {
         label: "CTR",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#3e95cd","8e5ea2"]
         data: [
 							ctr[0],
 							ctr[1],
-							ctr[2]
+							ctr[2],
+              ctr[3],
+              ctr[4]
 						]
       }
     ]
@@ -407,14 +415,16 @@ let cpl = <?php echo json_encode($CPL);?>;
 let espPopChart5 = new Chart(myChart5, {
   type:'horizontalBar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [{
       label: "CPL",
-      backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+      backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#3e95cd","#8e5ea2"],
       data: [
 							cpl[0],
 							cpl[1],
-							cpl[2]
+							cpl[2],
+              cpl[3],
+              cpl[4]
 						]
     }]
   },
@@ -451,13 +461,15 @@ let cuotamercado = <?php echo json_encode($CuotaMercado);?>;
 let espPopChart6 = new Chart(myChart6, {
   type:'bar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       {
         data: [
 							cuotamercado[0],
 							cuotamercado[1],
-							cuotamercado[2]
+							cuotamercado[2],
+              cuotamercado[3],
+              cuotamercado[4]
 						],
         label: "Cuota Mercado",
         backgroundColor: "#3e95cd"
@@ -496,13 +508,15 @@ let roce = <?php echo json_encode($ROCE);?>;
 let espPopChart7 = new Chart(myChart7, {
   type:'line', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       { 
         data: [
 						  roce[0],
 							roce[1],
-							roce[2]
+							roce[2],
+              roce[3],
+              roce[4]
 						],
         label: "ROCE",
         borderColor: "#3e95cd",
@@ -535,20 +549,22 @@ let espPopChart7 = new Chart(myChart7, {
 
 
 let myChart8 = document.getElementById('myChart8').getContext('2d');
-let roa2 = <?php echo json_encode($ROA);?>;
+let roa = <?php echo json_encode($ROA);?>;
 
 let espPopChart8 = new Chart(myChart8, {
   type:'bar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       {
         label: "ROA",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f"],
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#3e95cd", "#8e5ea2"],
         data: [
-          roa2[0],
-          roa2[1],
-          roa2[2]
+          roa[0],
+          roa[1],
+          roa[2],
+          roa[3],
+          roa[4]
 				]
       }
     ]
@@ -581,20 +597,22 @@ let espPopChart8 = new Chart(myChart8, {
 
 
 let myChart9 = document.getElementById('myChart9').getContext('2d');
-let roa = <?php echo json_encode($ROA);?>;
+let roe = <?php echo json_encode($ROE);?>;
 
 let espPopChart9 = new Chart(myChart9, {
   type:'line', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       { 
         data: [
-						  roa[0],
-							roa[1],
-							roa[2]
+						  roe[0],
+							roe[1],
+							roe[2],
+              roe[3],
+              roe[4]
 						],
-        label: "ROA",
+        label: "ROE",
         borderColor: "#3e95cd",
         fill: false
       }
@@ -603,7 +621,7 @@ let espPopChart9 = new Chart(myChart9, {
   options: {
     title: {
       display: true,
-      text: 'ROA',
+      text: 'ROE',
       fontSize:15
     },
     layout:{
@@ -630,13 +648,15 @@ let cur = <?php echo json_encode($CUR);?>;
 let espPopChart10 = new Chart(myChart10, {
   type:'bar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
   data: {
-    labels: ["2015","2016","2017"],
+    labels: ["2015","2016","2017","2018","2019"],
     datasets: [
       {
         data: [
 							cur[0],
 							cur[1],
-							cur[2]
+							cur[2],
+              cur[3],
+              cur[4]
 						],
         label: "CUR",
         backgroundColor: "#3e95cd"
