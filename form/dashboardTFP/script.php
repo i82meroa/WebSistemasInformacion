@@ -663,7 +663,7 @@ let espPopChart9 = new Chart(myChart9, {
 						],
         label: "ROE",
         borderColor: "rgba(255, 99, 132, 0.6)",
-        fill: false
+        fill: true
       }
     ]
   },
@@ -798,7 +798,7 @@ let espPopChart10 = new Chart(myChart10, {
         data: [{
           x: 2019,
           y: cur[4],
-          r: 25
+          r: 20
         }]
       }, {
         label: ["2020"],
