@@ -237,7 +237,7 @@ let espPopChart1 = new Chart(myChart1, {
               beneficioneto[4],
               beneficioneto[5]
 						],
-        label: function(tooltipItem) {return tooltipItem.yLabel;},
+        label: "Beneficio Neto",
         borderColor: "rgba(255, 99, 132, 0.6)",
         fill: false
       }
@@ -257,8 +257,13 @@ let espPopChart1 = new Chart(myChart1, {
         top:0
       }
     },
-    tooltips:{
-      enabled:true
+    tooltips: {
+      enabled:true,
+      callbacks: {
+          label: function(tooltipItem) {
+                return tooltipItem.yLabel;
+          }
+      }
     }
   }
 });
