@@ -66,7 +66,7 @@
     $contador=$pos -1;
     $pos =0;
 
-    while( $pos < $contador){
+    while( $pos <= $contador){
         $BeneficioNeto[$pos] = $Impuestos[$pos] + $Intereses[$pos];
         $pos = $pos +1;
     }
