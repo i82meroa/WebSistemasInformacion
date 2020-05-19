@@ -797,7 +797,7 @@ let espPopChart10 = new Chart(myChart10, {
         borderColor: "#000",
         data: [{
           x: 2019,
-          y: cur[4]
+          y: cur[4],
           r: 30
         }]
       }, {
@@ -806,7 +806,7 @@ let espPopChart10 = new Chart(myChart10, {
         borderColor: "rgba(193,46,12,1)",
         data: [{
           x: 2020,
-          y: cur[],
+          y: cur[5],
           r: 65
         }]
       }
