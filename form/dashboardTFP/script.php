@@ -247,7 +247,7 @@ let espPopChart1 = new Chart(myChart1, {
   options: {
     title: {
       display: true,
-      text: 'Beneficio Neto (en euros)',
+      text: 'Beneficio Neto (en €)',
       fontSize:15
     },
     layout:{
@@ -409,7 +409,7 @@ let espPopChart4 = new Chart(myChart4, {
     legend: { display: false },
     title: {
       display: true,
-      text: 'CTR ANUAL',
+      text: 'CTR',
       fontSize:15
     },
     layout:{
@@ -462,7 +462,7 @@ let espPopChart5 = new Chart(myChart5, {
     legend: { display: false },
     title: {
       display: true,
-      text: 'CPL ANUAL',
+      text: 'Coste por Lead',
       fontSize:15
     },
     layout:{
@@ -621,7 +621,7 @@ let espPopChart7 = new Chart(myChart7, {
   options: {
     title: {
       display: true,
-      text: 'ROCE',
+      text: 'Rentabilidad sobre el capital empleado',
       fontSize:15
     },
     layout:{
@@ -676,7 +676,7 @@ let espPopChart8 = new Chart(myChart8, {
     legend: { display: false },
     title: {
       display: true,
-      text: 'ROA',
+      text: 'Rentabilidad sobre los activos',
       fontSize:15
     },
     layout:{
@@ -726,7 +726,7 @@ let espPopChart9 = new Chart(myChart9, {
   options: {
     title: {
       display: true,
-      text: 'ROE',
+      text: 'Rentabilidad sobre los fondos propios',
       fontSize:15
     },
     layout:{
@@ -871,7 +871,7 @@ let espPopChart10 = new Chart(myChart10, {
   options: {
     title: {
       display: true,
-      text: 'CUR',
+      text: 'Tasa de uso de la capacidad',
       fontSize:15
     },
     layout:{
