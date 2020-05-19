@@ -88,10 +88,11 @@
           echo "Error: No se pudieron introducir los datos de Perdidas y ganancias <br>" . mysqli_error($conexion);
         }       
       
+        //Muestra todos los registros de la base de datos
         $sql = "SELECT * FROM VARIABLES";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Número de ventas</th><th>Número de clientes potenciales</th><th>Número de ventas totales</th></tr>";
+          echo "<table border='1'><tr><td BGCOLOR='#f7dc6f' colspan='4'><center><h3>Variables</h3></center></td></tr><tr><th>AÑO</th><th>Número de ventas</th><th>Número de clientes potenciales</th><th>Número de ventas totales</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td><td>".$row["n_clientes_potenciales"]."</td><td>".$row["N_VENTAS_TOTALES"]."</td></tr>";
             }
@@ -99,12 +100,12 @@
         }else {
           echo "No hay ningun dato de la tabla VARIABLE";
         }
-        echo "<br>";
+        echo "<br><br>";
 
         $sql = "SELECT * FROM DATOS_ACTIVOS";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Beneficio bruto</th><th>Impuestos</th><th>Intereses</th><th>Despreciacion</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
+          echo "<table border='1'><tr><td BGCOLOR='#f7dc6f' colspan='8'><center><h3>Datos activos</h3></center></td></tr><tr><th>AÑO</th><th>Beneficio bruto</th><th>Impuestos</th><th>Intereses</th><th>Despreciacion</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["Beneficio_bruto"]."</td><td>".$row["Impuestos"]."</td><td>".$row["Intereses"]."</td><td>".$row["Despreciacion"]."</td><td>".$row["Gastos_Generales"]."</td><td>".$row["Inversiones"]."</td><td>".$row["TOTAL_ACTIVOS"]."</td></tr>";
             }
@@ -112,12 +113,12 @@
         }else {
           echo "No hay ningun dato de la tabla Datos Activos";
         }
-        echo "<br>";
+        echo "<br><br>";
 
         $sql = "SELECT * FROM DATOS_PASIVOS";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Capital</th><th>Fondos propios</th></tr>";
+          echo "<table border='1'><tr><td BGCOLOR='#f7dc6f' colspan='3'><center><h3>Datos pasivos</h3></center></td></tr><tr><th>AÑO</th><th>Capital</th><th>Fondos propios</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["CAPITAL"]."</td><td>".$row["FONDOS_PROPIOS"]."</td></tr>";
             }
@@ -125,12 +126,12 @@
         }else {
           echo "No hay ningun dato de la tabla DATOS_PASIVOS";
         }
-        echo "<br>";
+        echo "<br><br>";
 
         $sql = "SELECT * FROM DATOS_MARKETING";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Clics</th><th>Impresiones</th><th>Capacidad actual</th><th>Capacidad máxima</th></tr>";
+          echo "<table border='1'><tr><td BGCOLOR='#f7dc6f' colspan='5'><center><h3>Datos Marketing</h3></center></td></tr><tr><th>AÑO</th><th>Clics</th><th>Impresiones</th><th>Capacidad actual</th><th>Capacidad máxima</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["Clics"]."</td><td>".$row["Impresiones"]."</td><td>".$row["CAPACIDAD_ACTUAL"]."</td><td>".$row["CAPACIDAD_MAXIMA"]."</td></tr>";
             }
@@ -138,12 +139,12 @@
         }else {
           echo "No hay ningun dato de la tabla DATOS_MARKETING";
         }
-        echo "<br>";
+        echo "<br><br>";
 
         $sql = "SELECT * FROM PERDIDAS_GANANCIAS";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Amortizaciones</th><th>Provisiones</th></tr>";
+          echo "<table border='1'><tr><td BGCOLOR='#f7dc6f' colspan='3'><center><h3>Pérdidas y ganancias</h3></center></td></tr><tr><th>AÑO</th><th>Amortizaciones</th><th>Provisiones</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["Amortizaciones"]."</td><td>".$row["Provisiones"]."</td></tr>";
             }
@@ -151,8 +152,7 @@
         }else {
           echo "No hay ningun dato de la tabla PERDIDAS_GANANCIAS";
         }
-        echo "<br>";
-
+        echo "<br><br>";
         mysqli_close($conexion);
       ?>
    <body>
