@@ -690,9 +690,9 @@ let espPopChart9 = new Chart(myChart9, {
 
 //-------------------------------------------------
 
-/*
+
 let myChart10 = document.getElementById('myChart10').getContext('2d');
-let cur = ;
+let cur = <?php echo json_encode($CUR);?>;
 
 let espPopChart10 = new Chart(myChart10, {
   type:'bar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
@@ -740,13 +740,13 @@ let espPopChart10 = new Chart(myChart10, {
       enabled:true
     }
   }
-});*/
+});
 
 
 
 
 
-
+/*
 let myChart10 = document.getElementById('myChart10').getContext('2d');
 let cur = <?php echo json_encode($CUR);?>;
 
@@ -843,7 +843,7 @@ let espPopChart10 = new Chart(myChart10, {
       enabled:true
     }
   }
-});
+});*/
 
 
 /*
