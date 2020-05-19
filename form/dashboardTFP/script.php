@@ -482,10 +482,10 @@ let espPopChart5 = new Chart(myChart5, {
 
 //------------------------------------------------------------
 
-
+/*
 //Esta parte es para los charts.
 let myChart6 = document.getElementById('myChart6').getContext('2d');
-let cuotamercado = <?php echo json_encode($CuotaMercado);?>;
+let cuotamercado = <?php //echo json_encode($CuotaMercado);?>;
 
 let espPopChart6 = new Chart(myChart6, {
   type:'bar', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
@@ -533,8 +533,59 @@ let espPopChart6 = new Chart(myChart6, {
       enabled:true
     }
   }
-});
+});*/
 
+
+
+let myChart6 = document.getElementById('myChart6').getContext('2d');
+let cuotamercado = <?php echo json_encode($CuotaMercado);?>;
+
+let espPopChart6 = new Chart(myChart6, {
+  type:'polarArea', //line, bar, radar, horizontalBar, pie, doughnut, polarArea, bubble, scatter
+  data: {
+      labels: ["2015","2016","2017","2018","2019", "2020"],
+      datasets: [
+        {
+          data: [
+							cuotamercado[0],
+							cuotamercado[1],
+							cuotamercado[2],
+              cuotamercado[3],
+              cuotamercado[4],
+              cuotamercado[5]
+						],
+          label: "Cuota Mercado",
+          backgroundColor:[
+            'rgba(255, 99, 132, 0.6)',
+            'rgba(54, 162, 235, 0.6)',
+            'rgba(255, 206, 86, 0.6)',
+            'rgba(75, 192, 192, 0.6)',
+            'rgba(153, 102, 255, 0.6)',
+            'rgba(255, 159, 64, 0.6)',
+            'rgba(255, 99, 132, 0.6)'
+          ]
+        }
+      ]
+    },
+    options: {
+    title: {
+      display: true,
+      text: 'Cuota de Mercado',
+      fontSize:15
+    },
+    layout:{
+      padding:{
+        left:0,
+        right:0,
+        bottom:0,
+        top:0
+      }
+    },
+    tooltips:{
+      enabled:true
+    }
+  }
+});
 
 //-------------------------------------------
 
