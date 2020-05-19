@@ -384,7 +384,15 @@ let espPopChart4 = new Chart(myChart4, {
     datasets: [
       {
         label: "CTR",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#3e95cd","8e5ea2"],
+        backgroundColor:[
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)',
+        'rgba(255, 99, 132, 0.6)'
+      ],
         data: [
 							ctr[0],
 							ctr[1],
@@ -430,7 +438,15 @@ let espPopChart5 = new Chart(myChart5, {
     labels: ["2015","2016","2017","2018","2019", "2020"],
     datasets: [{
       label: "CPL",
-      backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#3e95cd","#8e5ea2"],
+      backgroundColor:[
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)',
+        'rgba(255, 99, 132, 0.6)'
+      ],
       data: [
 							cpl[0],
 							cpl[1],
@@ -486,7 +502,15 @@ let espPopChart6 = new Chart(myChart6, {
               cuotamercado[5]
 						],
         label: "Cuota Mercado",
-        backgroundColor: "#3e95cd"
+        backgroundColor:[
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)',
+        'rgba(255, 99, 132, 0.6)'
+      ]
         
       }
     ]
@@ -573,7 +597,15 @@ let espPopChart8 = new Chart(myChart8, {
     datasets: [
       {
         label: "ROA",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#3e95cd", "#8e5ea2"],
+        backgroundColor:[
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)',
+        'rgba(255, 99, 132, 0.6)'
+      ],
         data: [
           roa[0],
           roa[1],
@@ -677,7 +709,15 @@ let espPopChart10 = new Chart(myChart10, {
               cur[5]
 						],
         label: "CUR",
-        backgroundColor: "#3e95cd"
+        backgroundColor:[
+        'rgba(255, 99, 132, 0.6)',
+        'rgba(54, 162, 235, 0.6)',
+        'rgba(255, 206, 86, 0.6)',
+        'rgba(75, 192, 192, 0.6)',
+        'rgba(153, 102, 255, 0.6)',
+        'rgba(255, 159, 64, 0.6)',
+        'rgba(255, 99, 132, 0.6)'
+      ],
         
       }
     ]
