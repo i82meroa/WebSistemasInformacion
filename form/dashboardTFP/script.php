@@ -791,24 +791,6 @@ let espPopChart10 = new Chart(myChart10, {
           y: cur[3],
           r: 40
         }]
-      }, {
-        label: ["2019"],
-        backgroundColor: "rgba(0,0,0,0.2)",
-        borderColor: "#000",
-        data: [{
-          x: 2019,
-          y: cur[4],
-          r: 30
-        }]
-      }, {
-        label: ["2020"],
-        backgroundColor: "rgba(193,46,12,0.2)",
-        borderColor: "rgba(193,46,12,1)",
-        data: [{
-          x: 2020,
-          y: cur[5],
-          r: 65
-        }]
       }
     ]
   },
