@@ -152,7 +152,7 @@
   $pos=0;
 
   while( $pos < $contador){
-      $CPL[$pos]= $NVentas[$pos] % $NVentasTotales[$pos];
+      $CuotaMercado[$pos]= $NVentas[$pos] % $NVentasTotales[$pos];
       $pos = $pos + 1;
   }
 
