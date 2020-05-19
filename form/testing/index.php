@@ -29,6 +29,7 @@
 	$resultado = mysqli_query($conn, $Datos_Activos); 
 	$pos = 0;
 
+	echo "holabuenastardes";
   //leemos datos y los ponemos en su lugar correspondiente manteniendo la relacion de posiciones
 	while ($row = mysqli_fetch_array($Datos_Activos)) {
 		$Ano[$pos] = $row ['ANO'];
