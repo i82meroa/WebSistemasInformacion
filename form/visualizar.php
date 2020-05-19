@@ -39,7 +39,7 @@
         $sql = "SELECT * FROM VARIABLES";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><th>AÑO</th><th>Número de ventas</th><th>Número de clientes potenciales</th><th>Número de ventas totales</th></tr>";
+          echo "<table border='1'><tr><td colspan='4'>Datos activos</td> <th>AÑO</th><th>Número de ventas</th><th>Número de clientes potenciales</th><th>Número de ventas totales</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td><td>".$row["n_clientes_potenciales"]."</td><td>".$row["N_VENTAS_TOTALES"]."</td></tr>";
             }
