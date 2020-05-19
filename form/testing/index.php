@@ -44,12 +44,13 @@
 		$Inversiones[$pos] = $row ['Inversiones'];
 		$TotalActivos[$pos] = $row ['TOTAL_ACTIVOS'];
 
-		
+		echo "<br>";
 		echo $Ano[$pos];
 		echo "<br>";
 		echo $Impuestos[$pos];
 		echo "<br>";
 		echo $Intereses[$pos];
+		echo "<br>";
 
 
 		$pos = $pos + 1;
