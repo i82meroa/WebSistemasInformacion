@@ -25,7 +25,7 @@
             <div class="col-xl-2 col-lg-3 col-md-4 sidebar fixed-top">
               <a href="#" class="navbar-brand text-white d-block mx-auto text-center py-3 mb-4 bottom-border">CorAnalytics</a>
               <div class="bottom-border pb-3">
-                <img src="images/salcines.png" width="50" class="rounded-circle mr-3">
+                <img src="images/personIcon.png" width="50" class="rounded-circle mr-3">
                 <a href="#" class="text-white">Enrique Salcines</a>
               </div>
               <ul class="navbar-nav flex-column mt-4">
@@ -509,7 +509,7 @@
                       <input type="checkbox" checked>
                     </div>
                     <div class="col-sm-9 col-8">
-                      Hablar con Marcos la posibilidad de expasi&oacute a Oriente.
+                      Hablar con Marcos la posibilidad de expansi&oacuten a Oriente.
                     </div>
                     <div class="col-1">
                       <a href="#" data-toggle="tooltip" title="<h6>edit</h6>" data-html="true" data-placement="top"><i class="fas fa-edit fa-lg text-success mr-2"></i></a>
