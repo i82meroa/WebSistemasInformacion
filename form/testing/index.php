@@ -111,14 +111,16 @@
     			var myChart = new Chart(ctx, {
         		type: 'line',
 		        data: {
-		            labels: [1,2,3],
+		            labels: [1,2,3,4,5],
 		            datasets: 
 		            [{
 		                label: 'Data 1',
 		                data: [
 							datos[0],
 							datos[1],
-							datos[2]
+							datos[2],
+							datos[3],
+							datos[4]
 						],
 		                backgroundColor: 'transparent',
 		                borderColor:'rgba(255,99,132)',
@@ -128,9 +130,11 @@
 		            {
 		            	label: 'Data 2',
 		                data: [
-							datos2[0],
-							datos2[1],
-							datos2[2]
+							datos[0],
+							datos[1],
+							datos[2],
+							datos[3],
+							datos[4]
 						],
 		                backgroundColor: 'transparent',
 		                borderColor:'rgba(0,255,255)',
