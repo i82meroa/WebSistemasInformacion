@@ -40,6 +40,13 @@
 		$Inversiones[$pos] = $row ['Inversiones'];
 		$TotalActivos[$pos] = $row ['TOTAL_ACTIVOS'];
 		$pos = $pos + 1;
+
+		
+		echo $Ano;
+		echo "<br>";
+		echo $Impuestos;
+		echo "<br>";
+		echo $Intereses;
 	}
 	//$Cantidad = trim($Cantidad,",");
 	//$Cantidad2 = trim($Cantidad2,",");
