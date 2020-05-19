@@ -827,7 +827,7 @@ let espPopChart10 = new Chart(myChart10, {
         data: [{
           x: 2016,
           y: cur[1],
-          r: 30
+          r: 35
         }]
       }, {
         label: ["2017"],
@@ -836,7 +836,7 @@ let espPopChart10 = new Chart(myChart10, {
         data: [{
           x: 2017,
           y: cur[2],
-          r: 40
+          r: 30
         }]
       }, {
         label: ["2018"],
@@ -845,7 +845,7 @@ let espPopChart10 = new Chart(myChart10, {
         data: [{
           x: 2018,
           y: cur[3],
-          r: 65
+          r: 45
         }]
       }, {
         label: ["2019"],
@@ -854,7 +854,7 @@ let espPopChart10 = new Chart(myChart10, {
         data: [{
           x: 2019,
           y: cur[4],
-          r: 20
+          r: 65
         }]
       }, {
         label: ["2020"],
@@ -863,7 +863,7 @@ let espPopChart10 = new Chart(myChart10, {
         data: [{
           x: 2020,
           y: cur[5],
-          r: 30
+          r: 55
         }]
       }
     ]
