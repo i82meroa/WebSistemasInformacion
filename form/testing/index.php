@@ -43,7 +43,6 @@
 		$GastosGenerales[$pos] = $row ['Gastos_Generales'];
 		$Inversiones[$pos] = $row ['Inversiones'];
 		$TotalActivos[$pos] = $row ['TOTAL_ACTIVOS'];
-		$pos = $pos + 1;
 
 		
 		echo $Ano[$pos];
@@ -51,6 +50,11 @@
 		echo $Impuestos[$pos];
 		echo "<br>";
 		echo $Intereses[$pos];
+
+
+		$pos = $pos + 1;
+
+
 	}
 	//$Cantidad = trim($Cantidad,",");
 	//$Cantidad2 = trim($Cantidad2,",");
