@@ -331,7 +331,7 @@ let espPopChart3 = new Chart(myChart3, {
 							ebitda[2],
               ebitda[3],
               ebitda[4],
-              ebitad[5]
+              ebitda[5]
 						],
         label: "EBITDA",
         borderColor: "#3e95cd",
