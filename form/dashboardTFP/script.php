@@ -334,7 +334,7 @@ let espPopChart3 = new Chart(myChart3, {
               ebitda[5]
 						],
         label: "EBITDA",
-        borderColor: "#3e95cd",
+        borderColor: "rgba(54, 162, 235, 0.6)",
         fill: false
       }
     ]
@@ -526,7 +526,7 @@ let espPopChart7 = new Chart(myChart7, {
               roce[5]
 						],
         label: "ROCE",
-        borderColor: "#3e95cd",
+        borderColor: "rgba(255, 206, 86, 0.6)",
         fill: false
       }
     ]
