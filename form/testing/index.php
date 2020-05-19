@@ -32,11 +32,9 @@
 
 
 
-	echo "holabuenastardes1";
+
   //leemos datos y los ponemos en su lugar correspondiente manteniendo la relacion de posiciones
 	while ($row = mysqli_fetch_array($resultado)) {
-		echo "<br>";
-		echo "holabuenastardes2";
 		$Ano[$pos] = $row ['ANO'];
 		$BeneficioBruto[$pos] = $row ['Beneficio_bruto'];
 		$Impuestos[$pos] = $row ['Impuestos'];
@@ -48,11 +46,11 @@
 		$pos = $pos + 1;
 
 		
-		echo $Ano;
+		echo $Ano[$pos];
 		echo "<br>";
-		echo $Impuestos;
+		echo $Impuestos[$pos];
 		echo "<br>";
-		echo $Intereses;
+		echo $Intereses[$pos];
 	}
 	//$Cantidad = trim($Cantidad,",");
 	//$Cantidad2 = trim($Cantidad2,",");
