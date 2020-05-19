@@ -32,6 +32,8 @@
 	echo "holabuenastardes";
   //leemos datos y los ponemos en su lugar correspondiente manteniendo la relacion de posiciones
 	while ($row = mysqli_fetch_array($Datos_Activos)) {
+		echo "<br>";
+		echo "holabuenastardes";
 		$Ano[$pos] = $row ['ANO'];
 		$BeneficioBruto[$pos] = $row ['Beneficio_bruto'];
 		$Impuestos[$pos] = $row ['Impuestos'];
