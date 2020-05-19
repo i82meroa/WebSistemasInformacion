@@ -373,7 +373,7 @@ let espPopChart4 = new Chart(myChart4, {
     datasets: [
       {
         label: "CTR",
-        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#3e95cd","8e5ea2"]
+        backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#3e95cd","8e5ea2"],
         data: [
 							ctr[0],
 							ctr[1],
