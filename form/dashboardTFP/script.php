@@ -34,7 +34,7 @@
   $pos = 0;
 
   //leemos datos y los ponemos en su lugar correspondiente manteniendo la relacion de posiciones
-  while ($row = mysqli_fetch_array($Datos_Activos)) {
+  while ($row = mysqli_fetch_array($resultado)) {
       $Ano[$pos] = $row ['ANO'];
       $BeneficioBruto[$pos] = $row ['Beneficio_bruto'];
       $Impuestos[$pos] = $row ['Impuestos'];
@@ -48,10 +48,10 @@
 
   //PARA LA TABLA DE DATOS PASIVOS
   $Datos_Pasivos="SELECT * FROM `DATOS_PASIVOS` ";
-  $resultado = mysqli_query($conn, $Datos_Pasivos); 
+  $resultado2 = mysqli_query($conn, $Datos_Pasivos); 
   $pos = 0;
 
-  while ($row = mysqli_fetch_array($Datos_Pasivos)) {
+  while ($row = mysqli_fetch_array($resultado2)) {
       $Ano[$pos] = $row ['ANO'];
       $Capital[$pos] = $row ['CAPITAL'];
       $FondosPropios[$pos] = $row ['FONDOS_PROPIOS'];
@@ -60,10 +60,10 @@
 
   //PARA LA TABLA DE DATOS MARKETING
   $Datos_Marketing="SELECT * FROM `DATOS_MARKETING` ";
-  $resultado = mysqli_query($conn, $Datos_Marketing); 
+  $resultado3 = mysqli_query($conn, $Datos_Marketing); 
   $pos = 0;
 
-  while ($row = mysqli_fetch_array($Datos_Marketing)) {
+  while ($row = mysqli_fetch_array($resultado3)) {
       $Ano[$pos] = $row ['ANO'];
       $Clics[$pos] = $row ['Clics'];
       $Impresiones[$pos] = $row ['Impresiones'];
@@ -74,10 +74,10 @@
 
   //PARA LA TABLA DE PERDIDAS GANANCIAS
   $Perdidas_Gananacias="SELECT * FROM `PERDIDAS_GANANCIAS` ";
-  $resultado = mysqli_query($conn, $Perdidas_Gananacias);
+  $resultado4 = mysqli_query($conn, $Perdidas_Gananacias);
   $pos = 0;
 
-  while ($row = mysqli_fetch_array($Perdidas_Gananacias)) {
+  while ($row = mysqli_fetch_array($resultado4)) {
       $Ano[$pos] = $row ['ANO'];
       $Amortizaciones[$pos] = $row ['Amortizaciones'];
       $Provisiones[$pos] = $row ['Provisiones'];
@@ -87,10 +87,10 @@
 
   //PARA LA TABLA DE VARIABLES
   $Variables="SELECT * FROM `VARIABLES` ";
-  $resultado = mysqli_query($conn, $Variables);
+  $resultado5 = mysqli_query($conn, $Variables);
   $pos = 0;
 
-  while ($row = mysqli_fetch_array($Variables)) {
+  while ($row = mysqli_fetch_array($resultado5)) {
       $Ano[$pos] = $row ['ANO'];
       $NVentas[$pos] = $row ['N_VENTAS'];
       $NClientesPotenciales[$pos] = $row ['n_clientes_potenciales'];
