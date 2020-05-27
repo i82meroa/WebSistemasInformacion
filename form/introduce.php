@@ -26,7 +26,7 @@
   <body background="./img/img1.jpeg">
       <div>
         <p>
-            <a href="index.php"><img src="./img/casa.png" alt="Menu principal" title="Menu principal" width="118" height="70"></a>
+            <a href="index.html"><img src="./img/casa.png" alt="Menu principal" title="Menu principal" width="118" height="70"></a>
         </p>
       </div>  
       <?php
