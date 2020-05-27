@@ -465,25 +465,25 @@
                   <h6 class="mb-3">Google Chrome</h6>
                   <div class="progress mb-4" style="height: 20px">
                     <div class="progress-bar progress-bar-striped font-weight-bold" style="width: 66%">
-                      91%
+                      66%
                     </div>
                   </div>
                   <h6 class="mb-3">Mozilla Firefox</h6>
                   <div class="progress mb-4" style="height: 20px">
                     <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: 21%">
-                      82%
+                      21%
                     </div>
                   </div>
                   <h6 class="mb-3">Safari</h6>
                   <div class="progress mb-4" style="height: 20px">
                     <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: 10%">
-                      67%
+                      10%
                     </div>
                   </div>
                   <h6 class="mb-3">Internet Explorer</h6>
                   <div class="progress mb-4" style="height: 20px">
                     <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: 3%">
-                      10%
+                      3%
                     </div>
                   </div>
                 </div>
