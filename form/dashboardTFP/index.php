@@ -464,25 +464,25 @@
                   <h4 class="mb-5">Ratios de visitas por navegador</h4>
                   <h6 class="mb-3">Google Chrome</h6>
                   <div class="progress mb-4" style="height: 20px">
-                    <div class="progress-bar progress-bar-striped font-weight-bold" style="width: 91%">
+                    <div class="progress-bar progress-bar-striped font-weight-bold" style="width: 66%">
                       91%
                     </div>
                   </div>
                   <h6 class="mb-3">Mozilla Firefox</h6>
                   <div class="progress mb-4" style="height: 20px">
-                    <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: 82%">
+                    <div class="progress-bar progress-bar-striped font-weight-bold bg-success" style="width: 21%">
                       82%
                     </div>
                   </div>
                   <h6 class="mb-3">Safari</h6>
                   <div class="progress mb-4" style="height: 20px">
-                    <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: 67%">
+                    <div class="progress-bar progress-bar-striped font-weight-bold bg-danger" style="width: 10%">
                       67%
                     </div>
                   </div>
                   <h6 class="mb-3">Internet Explorer</h6>
                   <div class="progress mb-4" style="height: 20px">
-                    <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: 10%">
+                    <div class="progress-bar progress-bar-striped font-weight-bold bg-info" style="width: 3%">
                       10%
                     </div>
                   </div>
