@@ -18,9 +18,17 @@
         tr:nth-child(even) {
           background-color: #dddddd;
         }
+        p {
+            margin-left: 90%;
+        }
       </style>
   </head>
   <body background="./img/img1.jpeg">
+      <div>
+        <p>
+            <a href="index.php"><img src="./img/casa.png" alt="Menu principal" title="Menu principal" width="118" height="70"></a>
+        </p>
+      </div>  
       <?php
         // Creamos la conexión pasándole el servidor, nombre de user, y clave. Si no se establece conexión muestra un error.
         $conexion = mysqli_connect("68.183.213.14", "usuario", "1920", "sif_tfp","3306");
