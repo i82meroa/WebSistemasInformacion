@@ -10,13 +10,13 @@
         }
 
         td, th {
-          border: 1px solid #93c4c3;
+          border: 1px solid #b6d9d8;
           text-align: left;
           padding: 8px;
         }
 
         tr:nth-child(even) {
-          background-color: #93c4c3;
+          background-color: #b6d9d8;
         }
         p {
             margin-left: 90%;
