@@ -5,23 +5,31 @@
         body {margin:0;}
         
         .icon-bar {
-          width: 75%;
-          overflow: auto;
-          margin: auto;
+            width: 75%;
+            overflow: auto;
+            margin: auto;
         }
         
         .icon-bar a {
-          float: left;
-          width: 33.33%;
-          text-align: center;
-          padding: 12px 0;
-          transition: all 0.3s ease;
-          color: white;
-          font-size: 36px;
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            padding: 12px 0;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 36px;
+        }
+
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
         }
         
         .icon-bar img:hover {
-          background-color: rgba(0, 0, 0, 0.2);;
+            background-color: rgba(0, 0, 0, 0.2);
         }
     </style>
 </head>
@@ -31,9 +39,11 @@
 <p>How to create side-by-side images with the CSS float property:</p>
 
 <div class="icon-bar">
-    <a href="visualizar.php"><img src="../img/data-search-icon.png" alt="Ver datos de la empresa" title="Ver datos de la empresa" style="width:50%"></a>
-    <a href="form.html"><img src="../img/document-edit-icon.png" alt="Registrar un año de la empresa" title="Registrar un año de la empresa" style="width:50%"></a>
-    <a href="./dashboardTFP/index.php"><img src="../img/graph-icon.png" alt="Dashboard" title="Dashboard" style="width:50%"></a>
+    <div class="vertical-center">
+        <a href="visualizar.php"><img src="../img/data-search-icon.png" alt="Ver datos de la empresa" title="Ver datos de la empresa" style="width:50%"></a>
+        <a href="form.html"><img src="../img/document-edit-icon.png" alt="Registrar un año de la empresa" title="Registrar un año de la empresa" style="width:50%"></a>
+        <a href="./dashboardTFP/index.php"><img src="../img/graph-icon.png" alt="Dashboard" title="Dashboard" style="width:50%"></a>
+    </div>
 </div>
 
 </body>
