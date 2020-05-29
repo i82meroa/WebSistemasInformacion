@@ -1,52 +1,50 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-    <meta charset="UTF-8">
     <style>
-
-        h3{
-            text-align: center;
-        }
-        .center{
-            width: 50%;
-            margin: 0 auto;
+        body {margin:0;}
+        
+        .icon-bar {
+            width: 100%;
+            overflow: auto;
+            margin: auto;
         }
         
-        * {
-        box-sizing: border-box;
+        .icon-bar a {
+            float: left;
+            width: 33.33%;
+            text-align: center;
+            padding: 12px 0;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 36px;
         }
 
-        .column {
-        float: left;
-        width: 33.33%;
-        padding: 5px;
+        .vertical-center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
         }
-
-        /* Clearfix (clear floats) */
-        .row::after {
-        content: "";
-        clear: both;
-        display: table;
+        
+        .icon-bar img:hover {
+            background-color: rgba(0, 0, 0, 0.2);
         }
-
     </style>
 </head>
-<body background="./img/img1.jpeg">
-    <div>
-        <div>
-            <h3>Men&uacute;</h3>
-        </div>
-        <div class="row">
-            <div class="column">
-                <a href="visualizar.php"><img src="./img/data-search-icon.png" alt="Ver datos de la empresa" title="Ver datos de la empresa" class="center"></a>
-            </div>
-            <div class="column">
-                <a href="form.html"><img src="./img/document-edit-icon.png" alt="Registrar un año de la empresa" title="Registrar un año de la empresa" class="center"></a>
-            </div>
-            <div class="column">
-                <a href="./dashboardTFP/index.php"><img src="./img/graph-icon.png" alt="Dashboard" title="Dashboard" class="center"></a>
-            </div>
-          </div> 
+<body background="../img/img1.jpeg">
+
+<h2>Images Side by Side</h2>
+<p>How to create side-by-side images with the CSS float property:</p>
+
+<div class="icon-bar">
+    <div class="vertical-center">
+        <a href="visualizar.php"><img src="./img/data-search-icon.png" alt="Ver datos de la empresa" title="Ver datos de la empresa" style="width:50%"></a>
+        <a href="form.html"><img src="./img/document-edit-icon.png" alt="Registrar un año de la empresa" title="Registrar un año de la empresa" style="width:50%"></a>
+        <a href="./dashboardTFP/index.php"><img src="./img/graph-icon.png" alt="Dashboard" title="Dashboard" style="width:50%"></a>
     </div>
+</div>
+
 </body>
 </html>
