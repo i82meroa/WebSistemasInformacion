@@ -26,7 +26,7 @@
   <body background="./img/img1.jpeg">
       <div>
         <p>
-            <a href="index.html"><img src="./img/casa.png" alt="Menu principal" title="Menu principal" width="118" height="118"></a>
+            <a href="index.html"><img src="./img/casa.png" alt="Menu principal" title="Menu principal" width="118" height="100"></a>
         </p>
       </div> 
       <?php
@@ -47,7 +47,7 @@
         $sql = "SELECT * FROM VARIABLES";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><td BGCOLOR='rgb(66, 117, 124)' colspan='4'><center><h3>Variables</h3></center></td></tr><tr><th>AÑO</th><th>Número de ventas</th><th>Número de clientes potenciales</th><th>Número de ventas totales</th></tr>";
+          echo "<table border='1'><tr><td BGCOLOR='#88d1c7' colspan='4'><center><h3>Variables</h3></center></td></tr><tr><th>AÑO</th><th>Número de ventas</th><th>Número de clientes potenciales</th><th>Número de ventas totales</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["N_VENTAS"]."</td><td>".$row["n_clientes_potenciales"]."</td><td>".$row["N_VENTAS_TOTALES"]."</td></tr>";
             }
