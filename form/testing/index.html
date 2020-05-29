@@ -1,43 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.column {
-  float: left;
-  width: 33.33%;
-  padding: 300px;
-}
-
-/* Clearfix (clear floats) */
-.row::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-</style>
+    <style>
+        body {margin:0;}
+        
+        .icon-bar {
+          width: 100%;
+          background-color: #555;
+          overflow: auto;
+        }
+        
+        .icon-bar a {
+          float: left;
+          width: 20%;
+          text-align: center;
+          padding: 12px 0;
+          transition: all 0.3s ease;
+          color: white;
+          font-size: 36px;
+        }
+        
+        .icon-bar a:hover {
+          background-color: #000;
+        }
+    </style>
 </head>
 <body background="../img/img1.jpeg">
 
 <h2>Images Side by Side</h2>
 <p>How to create side-by-side images with the CSS float property:</p>
 
-<div class="row">
-  <div class="column">
-    <!--<img src="../img/data-search-icon.png" alt="Ver datos de la empresa" title="Ver datos de la empresa" style="width:50%">-->
-    <img src="../img/data-search-icon.png" alt="Snow" style="width:50%" style="text-align: center;">
-  </div>
-  <div class="column">
-    <!--<img src="../img/document-edit-icon.png" alt="Registrar un año de la empresa" title="Registrar un año de la empresa" style="width:50%">-->
-    <img src="../img/document-edit-icon.png" alt="Forest" style="width:50%" style="margin:0 auto">
-  </div>
-  <div class="column">
-    <!--<img src="../img/graph-icon.png" alt="Dashboard" title="Dashboard" style="width:50%">-->
-    <img src="../img/graph-icon.png" alt="Mountains" style="width:50%">
-  </div>
+<div class="icon-bar">
+    <a href="visualizar.php"><img src="../img/data-search-icon.png" alt="Ver datos de la empresa" title="Ver datos de la empresa" style="width:50%"></a>
+    <a href="form.html"><img src="../img/document-edit-icon.png" alt="Registrar un año de la empresa" title="Registrar un año de la empresa" style="width:50%"></a>
+    <a href="./dashboardTFP/index.php"><img src="../img/graph-icon.png" alt="Dashboard" title="Dashboard" style="width:50%"></a>
 </div>
 
 </body>
