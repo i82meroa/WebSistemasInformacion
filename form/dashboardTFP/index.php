@@ -85,7 +85,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
-            <button type="button" class="btn btn-danger" data-dismiss="modal" formaction="./index.html">Salir</button>
+            <button onclick="location.href = '../index.html';" type="button" class="btn btn-danger" data-dismiss="modal">Salir</button>
           </div>
         </div>
       </div>
