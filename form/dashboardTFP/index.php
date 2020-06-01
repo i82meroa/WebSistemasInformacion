@@ -609,7 +609,7 @@
                     </div>
                     <div class="collapse" id="collapseTwo" data-parent="#accordion">
                       <div class="card-body">
-                        Voy a recomendaros a la empresa de mi primo, creo que no sabe lo que se está perdiendo :)
+                        Voy a recomendaros para la empresa de mi primo, creo que no sabe lo que se está perdiendo :)
                       </div>                      
                     </div>
                   </div>
@@ -622,7 +622,7 @@
                     </div>
                     <div class="collapse" id="collapseThree" data-parent="#accordion">
                       <div class="card-body">
-                        Me alegro mucho de haber dado el paso hacia una negocio más organizado, realmente a valido la pena.
+                        Me alegro mucho de haber dado el paso hacia una negocio más organizado, realmente ha valido la pena.
                       </div>                      
                     </div>
                   </div>
@@ -648,7 +648,7 @@
                     </div>
                     <div class="collapse" id="collapseFive" data-parent="#accordion">
                       <div class="card-body">
-                        Cuándo vi el precio pensé: Ni de coña. Cuándo vi lo que podía conseguir dije: quizá valga la pena. Ahora, con mi nuevo Dashboard, se que tomé la decisión correcta, ¡por muy cara que sea vale la pena!
+                        Cuándo vi el precio pensé: Ni de coña. Cuándo vi lo que podía conseguir dije: quizá valga la pena. Ahora, con mi nuevo Dashboard, se que tomé la decisión correcta.
                       </div>                      
                     </div>
                   </div>

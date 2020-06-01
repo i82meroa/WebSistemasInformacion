@@ -60,7 +60,7 @@
         $sql = "SELECT * FROM DATOS_ACTIVOS";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><td BGCOLOR='#5da8a6' colspan='8'><center><h3>Datos activos</h3></center></td></tr><tr><th>AÑO</th><th>Beneficio bruto</th><th>Impuestos</th><th>Intereses</th><th>Despreciacion</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
+          echo "<table border='1'><tr><td BGCOLOR='#5da8a6' colspan='8'><center><h3>Datos activos</h3></center></td></tr><tr><th>AÑO</th><th>Beneficio bruto</th><th>Impuestos</th><th>Intereses</th><th>Depreciación</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["Beneficio_bruto"]."</td><td>".$row["Impuestos"]."</td><td>".$row["Intereses"]."</td><td>".$row["Despreciacion"]."</td><td>".$row["Gastos_Generales"]."</td><td>".$row["Inversiones"]."</td><td>".$row["TOTAL_ACTIVOS"]."</td></tr>";
             }
