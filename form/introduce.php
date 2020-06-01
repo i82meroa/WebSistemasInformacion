@@ -6,17 +6,17 @@
           font-family: arial, sans-serif;
           border-collapse: collapse;
           width: 100%;
-          background-color: white;
+          background-color: #defffe;
         }
 
         td, th {
-          border: 1px solid #dddddd;
+          border: 1px solid #cae8e7;
           text-align: left;
           padding: 8px;
         }
 
         tr:nth-child(even) {
-          background-color: #dddddd;
+          background-color: #cae8e7;
         }
         p {
             margin-left: 90%;
@@ -26,7 +26,7 @@
   <body background="./img/img1.jpeg">
       <div>
         <p>
-            <a href="index.html"><img src="./img/casa.png" alt="Menu principal" title="Menu principal" width="118" height="70"></a>
+          <a href="index.html"><img src="./img/casa.png" alt="Menu principal" title="Menu principal" width="118" height="108"></a>
         </p>
       </div>  
       <?php
@@ -113,7 +113,7 @@
         $sql = "SELECT * FROM DATOS_ACTIVOS";
         $result = mysqli_query($conexion, $sql); 
         if (mysqli_num_rows($result) > 0) {
-          echo "<table border='1'><tr><td BGCOLOR='#f7dc6f' colspan='8'><center><h3>Datos activos</h3></center></td></tr><tr><th>AÑO</th><th>Beneficio bruto</th><th>Impuestos</th><th>Intereses</th><th>Despreciacion</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
+          echo "<table border='1'><tr><td BGCOLOR='#f7dc6f' colspan='8'><center><h3>Datos activos</h3></center></td></tr><tr><th>AÑO</th><th>Beneficio bruto</th><th>Impuestos</th><th>Intereses</th><th>Depreciación</th><th>Gastos Generales</th><th>Inversiones</th><th>Total activos</th></tr>";
             while($row = mysqli_fetch_assoc($result)) {
               echo "<tr><td>".$row["ANO"]."</td><td>".$row["Beneficio_bruto"]."</td><td>".$row["Impuestos"]."</td><td>".$row["Intereses"]."</td><td>".$row["Despreciacion"]."</td><td>".$row["Gastos_Generales"]."</td><td>".$row["Inversiones"]."</td><td>".$row["TOTAL_ACTIVOS"]."</td></tr>";
             }
